@@ -11,9 +11,12 @@
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li>Generatore di mail</li>
-      </ul>
+      <h1>{{title}}</h1>
+      <div v-if="generatedEmail.length === 10" class="my-generate-mails">
+        <ul v-for="mail in generatedEmail">
+          <li>{{mail}}</li>
+        </ul>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>
